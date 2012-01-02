@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.7" method="upgrade">
+	<name>jut!</name>
+	<version>1.0</version>
+	<creationDate>January 2012</creationDate>
+	<author>l33p</author>
+	<authorEmail>dev@l33p.com</authorEmail>
+	<authorUrl>http://j.l33p.com/ubar</authorUrl>
+	<description>Joomla! User Toolbar (jut!) - Component</description>
+	<license>http://www.gnu.org/licenses/gpl.html (GNU/GPL)</license>
+	<copyright>Copyright (C) 2012 l33p. All rights reserved.</copyright>
+	<files folder="frontend">
+		<filename>index.html</filename>
+		<filename>jut.php</filename>
+	</files>
+	<media folder="media" destination="jut">
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+	</media>
+	<scriptfile>scriptfile.php</scriptfile>
+	<administration>
+		<menu img="components/com_jut/assets/img/butterfly-16.png">jut!</menu>
+		<submenu>
+			<menu img="components/com_jut/assets/img/application_view_list.png" view="btns">Button List</menu>
+			<menu img="config.png" view="config">Configuration</menu>
+		</submenu>
+        <files folder="backend">
+			<filename>index.html</filename>
+			<filename>admin.jut.php</filename>
+			<filename>config.xml</filename>
+			<filename>defines.php</filename>
+			<folder>assets</folder>
+			<folder>classes</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages>
+			<language tag="en-GB">en-GB.com_jut.ini</language>
+		</languages>
+	</administration>
+	<config>
+		<fields>
+			<fieldset>
+				<field name="tbclr" default="#333" />
+				<field name="txtclr" default="#ccc" />
+				<field name="light" default="#444" />
+				<field name="brdclr" default="#333" />
+				<field name="brdw" default="2" />
+				<field name="brds" default="none" />
+				<field name="float" default="0" />
+				<field name="opacity" default="0.9" />
+				<field name="pos" default="bottom-center" />
+				<field name="ttcss" default="1" />
+				<field name="css" default="" />
+				
+				<!-- Advanced Parameters -->
+				<field name="id" default="uBarDiv" />
+				<field name="hide" default="0" />
+				<field name="gid" default="" />
+				<field name="menus" default="1" />
+				<field name="open-icon" default="cog.png" />
+				<field name="close-icon" default="cross.png" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

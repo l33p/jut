@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config menu="hide">
+	<params>
+		<param name="tbclr" type="text" default="#333" label="BAR COLOUR" />
+		<param name="txtclr" type="text" default="#ccc" label="TEXT COLOUR" />
+		<param name="light" type="text" default="#444" label="LIGHT COLOUR" />
+		<param name="brdclr" type="text" default="#333" label="BORDER COLOUR" />
+		<param name="brdw" type="list" default="2" label="BORDER WIDTH">
+			<option value="0">NONE</option>
+			<option value="1"></option>
+			<option value="2"></option>
+			<option value="3"></option>
+			<option value="4"></option>
+			<option value="5"></option>
+		</param>
+		<param name="brds" type="list" default="none" label="BORDER STYLE">
+			<option value="none">JNONE</option>
+			<option value="hidden">Hidden</option>
+			<option value="dashed">Dashed</option>
+			<option value="dotted">Dotted</option>
+			<option value="double">Double</option>
+			<option value="groove">Groove</option>
+			<option value="inset">Inset</option>
+			<option value="outset">Outset</option>
+			<option value="ridge">Ridge</option>
+			<option value="solid">Solid</option>
+		</param>
+		<param name="float" type="list" default="0" label="FLOAT" description="FLOAT DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</param>
+		<param name="opacity" type="list" default="0.9" label="OPACITY">
+			<option value="0.6">60%</option>
+			<option value="0.7">70%</option>
+			<option value="0.8">80%</option>
+			<option value="0.9">90%</option>
+			<option value="1">100%</option>
+		</param>
+		<param name="pos" type="list" default="bottom-center" label="POSITION">
+			<option value="bottom-center">BOTTOM CENTER</option>
+			<option value="bottom-left">BOTTOM LEFT</option>
+			<option value="bottom-right">BOTTOM RIGHT</option>
+			<option value="left-middle">LEFT</option>
+			<option value="right-middle">RIGHT</option>
+		</param>
+		<param name="ttcss" type="list" default="1" label="TOOLTIP">
+			<option value="0">JNONE</option>
+			<option value="1">AUTOMATIC CSS</option>
+		</param>
+		<param name="css" type="hidden" default="" />
+	</params>
+	<params group="advanced">
+		<param name="id" type="text" default="uBarDiv" label="ID (css)" />
+		<param name="hide" type="list" default="0" label="HIDE" description="HIDE DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</param>
+		<param name="gid" type="usergroup" default="" label="GROUP" description="ACCESS LEVEL" />
+		<param name="menus" type="radio" default="1" label="MENUS">
+			<option value="1">JALL</option>
+			<option value="0">JNONE</option>
+			<option value="2">SELECT FROM LIST</option>
+		</param>
+		<param name="mis" type="menuitems" label="SELECT ITEM" description="Select a menu item" />
+		<param name="open-icon" type="imagelist" default="cog.png" label="SHOW BAR" description="SHOW BAR DESC" directory="components/com_jut/assets/img/icons" />
+		<param name="close-icon" type="imagelist" default="cross.png" label="HIDE BAR" description="HIDE BAR DESC" directory="components/com_jut/assets/img/icons" />
+	</params>
+</config>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jut" default="copy_to_pkg" basedir=".">
+	
+	<!-- Properties -->
+	<property name="pkg"   value="./pkg"/>
+	<property name="j1.7"  value="../../../../wamp/www/j1.7" />
+
+	<!-- Component files -->
+	<fileset dir="${j1.7}" id="com-files">
+		<filename name="administrator/language/en-GB/en-GB.com_jut.ini"/>
+		<filename name="administrator/language/en-GB/en-GB.com_jut.sys.ini"/>
+	</fileset>
+	
+	<!-- Copy files -->
+	<target name="copy_to_pkg" description="Copies files to package.">
+		<echo message="Copying files from Joomla! 1.7 to package..." />
+        <copy todir="${pkg}/com/backend">
+            <fileset dir="${j1.7}/administrator/components/com_jut" />
+        </copy>
+        <copy todir="${pkg}/com/frontend">
+            <fileset dir="${j1.7}/components/com_jut" />
+        </copy>
+        <copy todir="${pkg}/com/media">
+            <fileset dir="${j1.7}/media/jut" />
+        </copy>
+        <copy todir="${pkg}/com">
+            <fileset refid="com-files" />
+        </copy>
+        <copy todir="${pkg}/plg">
+            <fileset dir="${j1.7}/plugins/system/jut" />
+        </copy>
+	</target>
+	
+	<!--
+		Task List:	http://ant.apache.org/manual/tasklist.html
+		Fileset:	http://ant.apache.org/manual/Types/fileset.html
+	-->
+
+</project>
